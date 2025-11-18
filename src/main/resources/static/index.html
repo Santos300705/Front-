@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safe Transfer — Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-body">
+  <header class="top-nav">
+    <div class="brand">Safe Transfer</div>
+    <nav>
+      <a href="index.html" aria-current="page">Login</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="dashboard.html">Painel</a>
+    </nav>
+  </header>
+
+  <main class="auth-wrapper">
+    <section class="auth-card">
+      <h1>Bem-vindo de volta</h1>
+      <p class="subtitle">Acesse sua conta para validar e acompanhar transferências PIX com segurança.</p>
+      <form id="loginForm" class="auth-form">
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" placeholder="seu@email.com" required />
+
+        <label for="senha">Senha</label>
+        <input id="senha" name="senha" type="password" placeholder="••••••••" required />
+
+        <button type="submit">Entrar</button>
+        <p class="form-note">Ainda não tem conta? <a href="cadastro.html">Crie agora</a></p>
+      </form>
+    </section>
+
+    <section class="auth-highlight">
+      <h2>Segurança em primeiro lugar</h2>
+      <ul>
+        <li>Verificação automática do nome verdadeiro da chave PIX.</li>
+        <li>Alertas claros quando algo parecer suspeito.</li>
+        <li>Histórico centralizado de todas as transações.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      window.location.href = 'dashboard.html';
+    });
+  </script>
+</body>
+</html>

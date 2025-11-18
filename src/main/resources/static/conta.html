@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safe Transfer — Minha Conta</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="secondary-page">
+  <header class="top-nav">
+    <div class="brand">Safe Transfer</div>
+    <nav>
+      <a href="dashboard.html">Painel</a>
+      <a href="historico.html">Histórico</a>
+      <a href="conta.html" aria-current="page">Minha conta</a>
+      <a class="ghost" href="index.html">Sair</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <section class="page-header">
+      <div>
+        <p class="eyebrow">Perfil e segurança</p>
+        <h1>Minha conta</h1>
+        <p>Gerencie seus dados, notificações e preferências de autenticação.</p>
+      </div>
+      <a class="outline-button" href="dashboard.html">Voltar ao painel</a>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Dados principais</h3>
+        <p><strong>Nome:</strong> João da Silva</p>
+        <p><strong>Email:</strong> joaodasilva@email.com</p>
+        <p><strong>Instituição:</strong> Safe Transfer Bank</p>
+      </article>
+
+      <article class="card">
+        <h3>Preferências de segurança</h3>
+        <ul class="bullet-list">
+          <li>Alertas por e-mail quando um nome divergir da chave.</li>
+          <li>Confirmação dupla para transferências acima de R$ 500,00.</li>
+          <li>Notificações push no app mobile.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Configurações rápidas</h3>
+        <form class="settings-form">
+          <label for="limite">Limite diário de envio</label>
+          <input id="limite" type="number" min="0" step="50" placeholder="Ex.: 1500" />
+
+          <label for="notificacoes">Notificações</label>
+          <select id="notificacoes">
+            <option value="email">E-mail</option>
+            <option value="push">Push</option>
+            <option value="ambos" selected>Push e e-mail</option>
+          </select>
+
+          <button type="button" onclick="alert('Preferências salvas!')">Salvar</button>
+        </form>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

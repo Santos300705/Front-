@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safe Transfer — Painel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="header-container">
+      <div class="brand">Safe Transfer</div>
+      
+      <div class="nav-links">
+        <a href="historico.html">Histórico completo</a>
+        <a href="conta.html">Minha conta</a>
+        <a class="ghost" href="index.html">Sair</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <!-- Aba: Home -->
+    <section id="home" class="tab-content active">
+      <div class="container">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Validação PIX</p>
+            <h2>Transferência segura em segundos</h2>
+            <p>Confirme o nome da chave e valide o pagamento antes de enviar.</p>
+          </div>
+          <a class="outline-button" href="historico.html">Ver histórico completo</a>
+        </div>
+
+        <form id="pixForm">
+          <div class="input-group">
+            <label for="chave">Chave PIX</label>
+            <input type="text" id="chave" placeholder="E-mail, telefone, CPF ou CNPJ" required />
+          </div>
+
+          <div class="input-group">
+            <label for="nomeInformado">Nome Informado</label>
+            <input type="text" id="nomeInformado" placeholder=""  />
+          </div>
+          
+
+          <div class="input-group">
+            <label for="nomeReal">Nome real da chave</label>
+            <input type="text" id="nomeReal" placeholder="Aparecerá após validar" readonly />
+          </div>
+
+          <button type="submit">Verificar Segurança</button>
+        </form>
+
+        <div id="resultado" class="resultado"></div>
+      </div>
+    </section>
+
+    <!-- Aba: Histórico -->
+    <section id="historico" class="tab-content">
+      <div class="container">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Histórico rápido</p>
+            <h2>Últimas transações</h2>
+          </div>
+          <a class="outline-button" href="historico.html">Abrir histórico completo</a>
+        </div>
+        <ul id="listaHistorico" class="historico-lista">
+          <li>Nenhuma transação registrada.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Aba: Conta -->
+    <section id="conta" class="tab-content">
+      <div class="container">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Perfil</p>
+            <h2>Minha Conta</h2>
+          </div>
+          <a class="outline-button" href="conta.html">Gerenciar detalhes</a>
+        </div>
+        <p><strong>Nome:</strong> João da Silva</p>
+        <p><strong>Email:</strong> joaodasilva@email.com</p>
+        <p><strong>Instituição:</strong> Safe Transfer Bank</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="footer-container">
+      <p>Safe Transfer<br><small>Protegendo suas transações desde 2025</small></p>
+      <div class="footer-links">
+        <p>📞 Suporte: <a href="mailto:contato@safetransfer.com">contato@safetransfer.com</a></p>
+        <p>🔗 <a href="#">Termos de uso</a> | <a href="#">Política de privacidade</a></p>
+        <p class="copy">© 2025 Safe Transfer. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

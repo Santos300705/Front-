@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safe Transfer — Histórico</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="secondary-page">
+  <header class="top-nav">
+    <div class="brand">Safe Transfer</div>
+    <nav>
+      <a href="dashboard.html">Painel</a>
+      <a href="historico.html" aria-current="page">Histórico</a>
+      <a href="conta.html">Minha conta</a>
+      <a class="ghost" href="index.html">Sair</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <section class="page-header">
+      <div>
+        <p class="eyebrow">Acompanhamento</p>
+        <h1>Histórico de transações</h1>
+        <p>Revise rapidamente as transações validadas pelo Safe Transfer.</p>
+      </div>
+      <a class="outline-button" href="dashboard.html">Voltar ao painel</a>
+    </section>
+
+    <section class="timeline">
+      <article class="timeline-card sucesso">
+        <div>
+          <p class="eyebrow">12/03 • 14:10</p>
+          <h3>PIX Válido</h3>
+          <p>Transferência para <strong>pagamentos@lojasol.com.br</strong> no valor de <strong>R$ 250,00</strong>.</p>
+        </div>
+        <span class="badge green">Verificado</span>
+      </article>
+
+      <article class="timeline-card alerta">
+        <div>
+          <p class="eyebrow">09/03 • 18:44</p>
+          <h3>Alerta de divergência</h3>
+          <p>Chave <strong>maria@dominio.com</strong> não corresponde ao nome informado. Transação bloqueada.</p>
+        </div>
+        <span class="badge red">Atenção</span>
+      </article>
+
+      <article class="timeline-card sucesso">
+        <div>
+          <p class="eyebrow">08/03 • 09:20</p>
+          <h3>PIX Válido</h3>
+          <p>Transferência para <strong>99999-8888</strong> no valor de <strong>R$ 120,00</strong>.</p>
+        </div>
+        <span class="badge green">Verificado</span>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
