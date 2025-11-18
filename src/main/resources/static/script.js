@@ -1,4 +1,4 @@
-const API_URL = "https://front-lqki.onrender.com";
+const API_URL = "https://safe-transfer-1234.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Script carregado e pronto.");
