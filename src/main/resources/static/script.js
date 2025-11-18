@@ -19,7 +19,7 @@ document.getElementById("pixForm").addEventListener("submit", async function (ev
     }
 
     try {
-        const response = await fetch("https://safe-transfer-api-1234.onrender.com/api/validar-pix", {
+        const response = await fetch("https://safe-transfer-1234.onrender.com", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
