@@ -1,5 +1,5 @@
 // URL CORRETA: APONTA PARA A API, NÃO PARA O FRONT
-const API_URL = "https://safe-transfer-1234.onrender.com/validar-pix";
+const API_URL = "https://safe-transfer-1234.onrender.com/api/validar-pix";
 // se seu endpoint for só "/validar-pix", use:
 // const API_URL = "https://safe-transfer-api-1234.onrender.com/validar-pix";
 
