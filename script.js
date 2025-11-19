@@ -1,7 +1,5 @@
 // URL CORRETA: APONTA PARA A API, NÃO PARA O FRONT
 const API_URL = "https://safe-transfer-1234.onrender.com/api/validar-pix";
-// se seu endpoint for só "/validar-pix", use:
-// const API_URL = "https://safe-transfer-api-1234.onrender.com/validar-pix";
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Script carregado e pronto.");
@@ -16,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const chavePix = document.getElementById("chave").value.trim();
     const nomeInformado = document.getElementById("nomeInformado").value.trim();
 
-    // só pra debug
     console.log("Enviando para API:", API_URL, { chavePix, nomeInformado });
 
     try {
@@ -43,14 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
       console.log("Resposta da API:", data);
 
-      // atualiza campo de nome real
+      // ⬇⬇⬇ AQUI INVERTEMOS
+
+      // Campo "Nome real da chave" deve mostrar o NOME da pessoa
+      // (que no seu JSON está vindo em data.mensagem)
       if (inputNomeReal) {
-        inputNomeReal.value = data.nomeReal || "";
+        inputNomeReal.value = data.mensagem || data.nomeReal || "";
       }
 
-      // mostra mensagem de resultado
+      // Abaixo, no resultado, queremos mostrar o TEXTO de alerta/situação
+      // (que no seu JSON está vindo em data.nomeReal)
       if (divResultado) {
-        divResultado.textContent = data.mensagem || "Validação concluída.";
+        divResultado.textContent =
+          data.nomeReal || data.mensagem || "Validação concluída.";
         divResultado.className = "resultado";
 
         if (data.status === "VALIDO") {
@@ -61,7 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } catch (err) {
       console.error("Erro de rede/fetch:", err);
-      alert("Não foi possível falar com a API (Failed to fetch). Veja o console.");
+      alert(
+        "Não foi possível falar com a API (Failed to fetch). Veja o console."
+      );
     }
   });
 });
