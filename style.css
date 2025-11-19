@@ -53,11 +53,11 @@ a {
 
 .top-nav a[aria-current] {
   background: var(--azul-principal);
-  color: #0b366f;
+  color: #9ea1a6;
 }
 
 .top-nav a:hover {
-  background: #e8eefc;
+  background: #104fe1;
 }
 
 .ghost {
