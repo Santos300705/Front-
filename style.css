@@ -53,7 +53,7 @@ a {
 
 .top-nav a[aria-current] {
   background: var(--azul-principal);
-  color: #fff;
+  color: #0b366f;
 }
 
 .top-nav a:hover {
