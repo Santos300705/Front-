@@ -20,6 +20,7 @@
     <section class="auth-card">
       <h1>Bem-vindo de volta</h1>
       <p class="subtitle">Acesse sua conta para validar e acompanhar transferências PIX com segurança.</p>
+      
       <form id="loginForm" class="auth-form">
         <label for="email">E-mail</label>
         <input id="email" name="email" type="email" placeholder="seu@email.com" required />
@@ -42,48 +43,7 @@
     </section>
   </main>
 
-  <script>
-    const API_BASE_URL = "https://safe-transfer-1234.onrender.com";
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("loginForm");
-
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        const email = document.getElementById("email").value.trim();
-        const senha = document.getElementById("senha").value.trim();
-
-        try {
-          const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email, senha }),
-          });
-
-          if (!response.ok) {
-            const errorBody = await response.text();
-            console.error("Erro no login:", errorBody);
-            alert("Falha no login. Verifique e-mail/senha.");
-            return;
-          }
-
-          const data = await response.json();
-          console.log("Login OK:", data);
-
-          // se sua API devolver token, você pode guardar:
-          // if (data.token) localStorage.setItem("token", data.token);
-
-          alert("Login realizado com sucesso!");
-          window.location.href = "dashboard.html";
-        } catch (err) {
-          console.error("Erro de rede no login:", err);
-          alert("Não foi possível conectar à API de login.");
-        }
-      });
-    });
-  </script>
+  <!-- IMPORTANTE: chama o script.js NOVO -->
+  <script src="script.js"></script>
 </body>
 </html>

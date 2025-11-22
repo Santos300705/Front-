@@ -20,6 +20,7 @@
     <section class="auth-card">
       <h1>Crie sua conta</h1>
       <p class="subtitle">Cadastre-se para acompanhar e validar suas transferências.</p>
+
       <form id="cadastroForm" class="auth-form">
         <label for="nome">Nome completo</label>
         <input id="nome" name="nome" type="text" placeholder="Ex.: Ana Souza" required />
@@ -52,58 +53,7 @@
     </section>
   </main>
 
-  <script>
-    const API_BASE_URL = "https://safe-transfer-1234.onrender.com";
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("cadastroForm");
-
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        const nome = document.getElementById("nome").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const telefone = document.getElementById("telefone").value.trim();
-        const senha = document.getElementById("senha").value.trim();
-        const confirmacao = document.getElementById("confirmacao").value.trim();
-
-        if (senha !== confirmacao) {
-          alert("As senhas não conferem.");
-          return;
-        }
-
-        try {
-          const response = await fetch(`${API_BASE_URL}/api/auth/register`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              nome: nome,
-              email: email,
-              telefone: telefone,
-              senha: senha,
-            }),
-          });
-
-          if (!response.ok) {
-            const errorBody = await response.text();
-            console.error("Erro no cadastro:", errorBody);
-            alert("Erro ao cadastrar usuário.");
-            return;
-          }
-
-          const data = await response.json().catch(() => null);
-          console.log("Cadastro OK:", data);
-
-          alert("Cadastro realizado com sucesso! Faça login para continuar.");
-          window.location.href = "index.html";
-        } catch (err) {
-          console.error("Erro de rede no cadastro:", err);
-          alert("Não foi possível conectar à API de cadastro.");
-        }
-      });
-    });
-  </script>
+  <!-- IMPORTANTE: chama o script.js NOVO -->
+  <script src="script.js"></script>
 </body>
 </html>
