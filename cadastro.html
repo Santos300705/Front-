@@ -19,32 +19,72 @@
   <main class="auth-wrapper">
     <section class="auth-card">
       <h1>Crie sua conta</h1>
-      <p class="subtitle">Cadastre-se para acompanhar e validar suas transferências.</p>
+      <p class="subtitle">
+        Cadastre-se para acompanhar e validar suas transferências.
+      </p>
 
+      <!-- FORMULÁRIO DE CADASTRO -->
       <form id="cadastroForm" class="auth-form">
         <label for="nome">Nome completo</label>
-        <input id="nome" name="nome" type="text" placeholder="Ex.: Ana Souza" required />
+        <input
+          id="nome"
+          name="nome"
+          type="text"
+          placeholder="Ex.: Ana Souza"
+          required
+        />
 
         <label for="email">E-mail</label>
-        <input id="email" name="email" type="email" placeholder="voce@email.com" required />
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="voce@email.com"
+          required
+        />
 
         <label for="telefone">Telefone</label>
-        <input id="telefone" name="telefone" type="tel" placeholder="(11) 99999-0000" required />
+        <input
+          id="telefone"
+          name="telefone"
+          type="tel"
+          placeholder="(11) 99999-0000"
+          required
+        />
 
         <label for="senha">Crie uma senha</label>
-        <input id="senha" name="senha" type="password" placeholder="••••••••" minlength="6" required />
+        <input
+          id="senha"
+          name="senha"
+          type="password"
+          placeholder="••••••••"
+          minlength="6"
+          required
+        />
 
         <label for="confirmacao">Confirme a senha</label>
-        <input id="confirmacao" name="confirmacao" type="password" placeholder="••••••••" minlength="6" required />
+        <input
+          id="confirmacao"
+          name="confirmacao"
+          type="password"
+          placeholder="••••••••"
+          minlength="6"
+          required
+        />
 
         <button type="submit">Cadastrar</button>
-        <p class="form-note">Já tem login? <a href="index.html">Entre aqui</a></p>
+        <p class="form-note">
+          Já tem login? <a href="index.html">Entre aqui</a>
+        </p>
       </form>
     </section>
 
     <section class="auth-highlight">
       <h2>Comece em minutos</h2>
-      <p>Depois do cadastro, você já será redirecionado para o painel para começar a validar PIX.</p>
+      <p>
+        Depois do cadastro, você será redirecionado para fazer login e acessar o painel
+        para começar a validar PIX.
+      </p>
       <div class="checklist">
         <span>✔</span><p>Configure suas preferências de segurança.</p>
         <span>✔</span><p>Consulte histórico e status em tempo real.</p>
@@ -53,7 +93,6 @@
     </section>
   </main>
 
-  <!-- IMPORTANTE: chama o script.js NOVO -->
   <script src="script.js"></script>
 </body>
 </html>

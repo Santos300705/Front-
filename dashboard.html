@@ -11,7 +11,7 @@
   <header>
     <div class="header-container">
       <div class="brand">Safe Transfer</div>
-      
+
       <div class="nav-links">
         <a href="historico.html">Histórico completo</a>
         <a href="conta.html">Minha conta</a>
@@ -22,7 +22,7 @@
 
   <!-- Conteúdo principal -->
   <main>
-    <!-- Aba: Home -->
+    <!-- Seção principal: Validação PIX -->
     <section id="home" class="tab-content active">
       <div class="container">
         <div class="panel-heading">
@@ -34,31 +34,46 @@
           <a class="outline-button" href="historico.html">Ver histórico completo</a>
         </div>
 
+        <!-- FORMULÁRIO PIX -->
         <form id="pixForm">
           <div class="input-group">
             <label for="chave">Chave PIX</label>
-            <input type="text" id="chave" placeholder="E-mail, telefone, CPF ou CNPJ" required />
+            <input
+              type="text"
+              id="chave"
+              placeholder="E-mail, telefone, CPF ou CNPJ"
+              required
+            />
           </div>
 
           <div class="input-group">
-            <label for="nomeInformado">Nome Informado</label>
-            <input type="text" id="nomeInformado" placeholder=""  />
+            <label for="nomeInformado">Nome informado</label>
+            <input
+              type="text"
+              id="nomeInformado"
+              placeholder="Nome que você recebeu do contato"
+            />
           </div>
-          
 
           <div class="input-group">
             <label for="nomeReal">Nome real da chave</label>
-            <input type="text" id="nomeReal" placeholder="Aparecerá após validar" readonly />
+            <input
+              type="text"
+              id="nomeReal"
+              placeholder="Aparecerá após validar"
+              readonly
+            />
           </div>
 
           <button type="submit">Verificar Segurança</button>
         </form>
 
+        <!-- Mensagem de resultado -->
         <div id="resultado" class="resultado"></div>
       </div>
     </section>
 
-    <!-- Aba: Histórico -->
+    <!-- Seção: Histórico rápido -->
     <section id="historico" class="tab-content">
       <div class="container">
         <div class="panel-heading">
@@ -68,13 +83,15 @@
           </div>
           <a class="outline-button" href="historico.html">Abrir histórico completo</a>
         </div>
+
+        <!-- LISTA QUE O JS ATUALIZA -->
         <ul id="listaHistorico" class="historico-lista">
           <li>Nenhuma transação registrada.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Aba: Conta -->
+    <!-- Seção: Conta (resumo) -->
     <section id="conta" class="tab-content">
       <div class="container">
         <div class="panel-heading">
@@ -94,10 +111,16 @@
   <!-- Rodapé -->
   <footer>
     <div class="footer-container">
-      <p>Safe Transfer<br><small>Protegendo suas transações desde 2025</small></p>
+      <p>Safe Transfer<br /><small>Protegendo suas transações desde 2025</small></p>
       <div class="footer-links">
-        <p>📞 Suporte: <a href="mailto:contato@safetransfer.com">contato@safetransfer.com</a></p>
-        <p>🔗 <a href="#">Termos de uso</a> | <a href="#">Política de privacidade</a></p>
+        <p>
+          📞 Suporte:
+          <a href="mailto:contato@safetransfer.com">contato@safetransfer.com</a>
+        </p>
+        <p>
+          🔗 <a href="#">Termos de uso</a> |
+          <a href="#">Política de privacidade</a>
+        </p>
         <p class="copy">© 2025 Safe Transfer. Todos os direitos reservados.</p>
       </div>
     </div>
